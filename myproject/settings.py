@@ -125,8 +125,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-LOGIN_REDIRECT_URL = '/'
-LOGIN_URL = '/'
+# LOGIN_REDIRECT_URL = '/'
+# LOGIN_URL = '/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 MEDIA_URL = "/media/"
@@ -146,14 +146,14 @@ MESSAGE_TAGS = {
 }
 
 
-# The AWS region to connect to.
-AWS_REGION = "us-west-004"
+# # The AWS region to connect to.
+# AWS_REGION = "us-west-004"
 
-# The AWS access key to use.
-AWS_ACCESS_KEY_ID = ""
+# # The AWS access key to use.
+# AWS_ACCESS_KEY_ID = ""
 
-# The AWS secret access key to use.
-AWS_SECRET_ACCESS_KEY = ""
+# # The AWS secret access key to use.
+# AWS_SECRET_ACCESS_KEY = ""
 
-# The optional AWS session token to use.
-AWS_SESSION_TOKEN = ""
+# # The optional AWS session token to use.
+# AWS_SESSION_TOKEN = ""
