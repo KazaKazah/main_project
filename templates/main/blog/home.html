@@ -1,0 +1,14 @@
+{% extends 'main/base.html' %}
+{% block blog %}
+    <div class="container py-3">
+        <ul>
+            {% for post in post_list %}
+                <li>
+                    <b>название</b>: <a href="{{ post.get_absolute_url }}">{{ post.name }}</a><br>
+                    <b>автор</b>: {{ post.author }} ({{ post.author.first_name }} {{ post.author.last_name }})<br>
+                    <b>дата создания</b>: {{ post.create_data }}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock blog %}
