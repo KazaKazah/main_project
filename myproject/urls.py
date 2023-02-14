@@ -8,6 +8,7 @@ urlpatterns = [
     path("__reload__/", include("django_browser_reload.urls")),
     path('summernote/', include("django_summernote.urls")),
     path('', include('blog.urls')),
+    path('', include('users.urls')),
 ]
 
 

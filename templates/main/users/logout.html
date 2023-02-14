@@ -1,0 +1,17 @@
+{% extends "main/users/bases.html" %}
+{% block title %}Logout{% endblock title %}
+{% block content %}
+    <div class="container py-3 text-center">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Вы вышли из аккаунта</h5>
+                <p class="card-text">
+                    Спсибо за ваше потраченное время
+                </p>
+                <br>
+                <hr>
+                <a href="{% url 'login' %}" class="btn btn-primary">Вход</a>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

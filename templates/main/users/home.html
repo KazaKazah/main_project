@@ -1,0 +1,18 @@
+{% extends "main/users/bases.html" %}
+{% block title %} Home Page {% endblock title %}
+{% block content %}
+    <div class="jumbotron">
+        <h1 class="display-4">Добро Пожаловать: {{ user.first_name }} {{ user.last_name }}</h1>
+        <p class="lead">
+            Для продолжения <b>пользователь должен быть зарегестрирован и авторизован в системистеме</b>
+        </p>
+        <hr class="my-4">
+        <p class="lead">
+            <a class="btn btn-primary btn-lg" href="{% url 'logout' %}" role="button">Выход</a>
+            <a class="btn btn-primary btn-lg" href="{% url 'login' %}" role="button">Вход</a>
+            {% if user.is_authenticated %}
+                <a class="btn btn-primary btn-lg" href="{% url 'home_page' %}" role="button">Далее</a>
+            {% endif %}
+        </p>
+    </div>
+{% endblock content %}
