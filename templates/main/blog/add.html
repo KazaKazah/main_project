@@ -1,0 +1,15 @@
+{% extends 'main/base.html' %}
+{% block blog %}
+    <h1>Создвник нового поста</h1>
+    <br>
+    <br>
+    <div class="form-group">
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn btn-secondary">
+                Создать новый пост
+            </button>
+        </form>
+    </div>
+{% endblock blog %}

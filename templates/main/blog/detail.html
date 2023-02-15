@@ -2,8 +2,8 @@
 {% block blog %}
     <style>
         .ret {
-            height: 300px;
-            width: 300px;
+            height: 600px;
+            width: 400px;
         }
     </style>
 
@@ -13,8 +13,8 @@
         {{ post.author.first_name }}
         {{ post.author.last_name }}
         {{ post.create_data }}
-        <a href="">[редактировать]</a>
-        <a href="">[удалить]</a>
+        <a href="{% url 'update_post_page' post.pk %}">[редактировать]</a>
+        <a href="{% url 'delete_post_page' post.pk %}">[удалить]</a>
     </small>
     <br>
     <hr>
