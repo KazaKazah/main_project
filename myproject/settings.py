@@ -148,14 +148,14 @@ MESSAGE_TAGS = {
 }
 
 
-# # The AWS region to connect to.
-# AWS_REGION = "us-west-004"
+# The AWS region to connect to.
+AWS_REGION = "us-west-004"
 
-# # The AWS access key to use.
-# AWS_ACCESS_KEY_ID = ""
+# The AWS access key to use.
+AWS_ACCESS_KEY_ID = "004a4e55df4109e0000000001"
 
-# # The AWS secret access key to use.
-# AWS_SECRET_ACCESS_KEY = ""
+# The AWS secret access key to use.
+AWS_SECRET_ACCESS_KEY = "K004Nd1he6OUMPgztGVBmuj39wvzqrk"
 
-# # The optional AWS session token to use.
-# AWS_SESSION_TOKEN = ""
+# The full URL to the S3 endpoint. Leave blank to use the default region URL.
+AWS_S3_ENDPOINT_URL = "https://s3.us-west-004.backblazeb2.com"
