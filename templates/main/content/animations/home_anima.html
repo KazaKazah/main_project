@@ -1,12 +1,5 @@
 {% extends 'main/content/animations/base_animations.html' %}
 {% block anima %}
-    <style>
-        .r {
-            width: 600px;
-            height: 500px;
-        }
-    </style>
-
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
         {% for a in anima %}
             <div class="col">
@@ -28,4 +21,23 @@
             </div>
         {% endfor %}
     </div>
+
+
+    {#-----------------------------------------пагинация страниц------------------------------------------------------#}
+    {% if is_paginated %}
+        <nav aria-label="Page navigation conatiner"></nav>
+        <ul class="pagination justify-content-center">
+            {% if page_obj.has_previous %}
+                <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; Предыдущая
+                    страница </a></li>
+            {% endif %}
+            {% if page_obj.has_next %}
+                <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> Следующая страница &raquo;</a>
+                </li>
+
+            {% endif %}
+        </ul>
+        </nav>
+        </div>
+    {% endif %}
 {% endblock anima %}
