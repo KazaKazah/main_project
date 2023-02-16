@@ -1,12 +1,11 @@
-from django.views.generic import *
-
+from django.views.generic import * 
 from content.models import *
 
 
 class AnimationHomePage(ListView):
+    paginate_by = 3
     model = AnimationsName
     template_name = 'main/content/animations/home_anima.html'
-    paginate_by = 6
 
     def get_context_data(self, *args, **kwargs):
         anima = AnimationsName.objects.all()
