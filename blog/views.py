@@ -4,6 +4,7 @@ from django.views.generic import *
 from .forms import *
 from .models import *
 
+
 # Create your views here.
 
 class HomePageView(ListView):
