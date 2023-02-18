@@ -1,5 +1,5 @@
-from content.models.animation import AnimationsName
+from content.models.animation import Animations
 
 __all__ = [
-    'AnimationsName',
+    'Animations',
 ]
