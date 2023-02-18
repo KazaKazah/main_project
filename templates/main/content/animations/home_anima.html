@@ -1,15 +1,18 @@
 {% extends 'main/content/animations/base_animations.html' %}
 {% block anima %}
-    <div class="card-group">
+    <div class="row row-cols-1 row-cols-md-2 g-4">
         {% for a in anima %}
-            <div class="card">
-                {% if a.animat_pic %}
-                    <img src="{{ a.animat_pic.url }}" class="card-img-top" alt="...">
-                {% endif %}
-                <div class="card-body">
-                    <h5 class="card-title">{{ a.name }}</h5>
-                    <p class="card-text">{{ a.title }}</p>
-                    <p class="card-text"><small class="text-muted"><a href="">детальная информация</a></small></p>
+            <div class="col">
+                <div class="card">
+                    {% if a.animat_pic %}
+                        <img src="{{ a.animat_pic.url }}" class="card-img-top" alt="...">
+                    {% endif %}
+                    <div class="card-body">
+                        <h5 class="card-title"><a href=""><{{ a.name }}/a></h5>
+                        <p class="card-text">
+                            {{ a.title }}
+                        </p>
+                    </div>
                 </div>
             </div>
         {% endfor %}
