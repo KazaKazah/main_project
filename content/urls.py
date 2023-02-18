@@ -4,5 +4,5 @@ from content.views.animated_view import *
 
 urlpatterns = [
     path('content/', AnimationHomeView.as_view(), name='anima_home'),
-    path('content/detail/<int:pk>/', AnimeTypeDetailView.as_view(), name='anima_detail'),
+    path('content/detail/<slug:slug>/', AnimeTypeDetailView.as_view(), name='anima_detail'),
 ]
