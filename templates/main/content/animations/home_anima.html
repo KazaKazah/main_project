@@ -24,18 +24,18 @@
     {#-----------------------------------------пагинация страниц------------------------------------------------------#}
     <div class="pagination">
     <span class="step-links">
-        {% if a.has_previous %}
+        {% if anima.has_previous %}
             <a href="?page=1">&laquo; first</a>
-            <a href="?page={{ a.previous_page_number }}">previous</a>
+            <a href="?page={{ anima.previous_page_number }}">previous</a>
         {% endif %}
 
         <span class="current">
-            Page {{ a.number }} of {{ a.paginator.num_pages }}.
+            Page {{ anima.number }} of {{ anima.paginator.num_pages }}.
         </span>
 
-        {% if a.has_next %}
-            <a href="?page={{ a.next_page_number }}">next</a>
-            <a href="?page={{ a.paginator.num_pages }}">last &raquo;</a>
+        {% if anima.has_next %}
+            <a href="?page={{ anima.next_page_number }}">next</a>
+            <a href="?page={{ anima.paginator.num_pages }}">last &raquo;</a>
         {% endif %}
     </span>
     </div>
