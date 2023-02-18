@@ -1,24 +1,17 @@
 {% extends 'main/content/animations/base_animations.html' %}
 {% block anima %}
-<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-    {% for a in anima %}
-    <div class="col">
-        <div class="card shadow-sm">
-            {% if a.animat_pic %}
-            <img src="{{ a.animat_pic.url }}" alt="">
-            {% endif %}
-            <div class="card-body">
-                <p class="card-text">{{ a.name }}</p>
-                <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
+    <div class="card-group">
+        {% for a in anima %}
+            <div class="card">
+                {% if a.animat_pic %}
+                    <img src="{{ a.animat_pic.url }}" class="card-img-top" alt="...">
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ a.name }}</h5>
+                    <p class="card-text">{{ a.title }}</p>
+                    <p class="card-text"><small class="text-muted"><a href="">детальная информация</a></small></p>
                 </div>
             </div>
-        </div>
+        {% endfor %}
     </div>
-    {% endfor %}
-</div>
 {% endblock anima %}
