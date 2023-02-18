@@ -17,15 +17,3 @@ class AnimationHomePage(ListView):
         }
         return context
 
-
-def animations_list(request):
-    object_list = Animations.objects.all()
-    paginator = Paginator(object_list, 3)
-    page = request.GET.get('page')
-    try:
-        animations = paginator.page(page)
-    except PageNotAnInteger:
-        animations = paginator.page(1)
-    except EmptyPage:
-        animations = paginator.page(paginator.num_pages)
-    return render(request, 'main/content/animations/home_anima.html', {'page': page, 'animations': animations})
