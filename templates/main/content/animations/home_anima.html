@@ -5,14 +5,10 @@
             {% for a in anima %}
                 <div class="col my-3">
                     <div class="card">
-                        {% if a.animat_pic %}
-                            <img src="{{ a.animat_pic.url }}" class="card-img-top" alt="..."
-                                 style="max-width: 100%; height: auto">
-                        {% endif %}
                         <div class="card-body">
                             <h5 class="card-title">{{ a.name }}</h5>
                             <p class="card-text">
-                                вселенная: {{ a.title }}<br>
+                                краткое описание: {{ a.body }}<br>
                             </p>
                             <a href="" class="btn btn-primary">подробнее</a>
                         </div>
