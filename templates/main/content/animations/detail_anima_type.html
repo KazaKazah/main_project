@@ -1,4 +1,24 @@
 {% extends 'main/content/animations/base_animations.html' %}
 {% block anima %}
-
+    <h1>Страница жанров</h1>
+    <br>
+    <hr>
+    <br>
+    <div class="container">
+        <div class="row row-cols-3">
+            {% for t in types %}
+                <div class="col my-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ t.name }}</h5>
+                            <p class="card-text">
+                                краткое описание: {{ t.body|slice:20 }}<br>
+                            </p>
+                            <a href="" class="btn btn-primary">перейти к связанным аниме</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
 {% endblock anima %}
