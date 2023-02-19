@@ -1,4 +1,4 @@
-from content.models.animation import Animations, AnimationsType, Animation
+from content.models.content.animations.animation import Animations, AnimationsType, Animation
 
 __all__ = [
     'Animations',

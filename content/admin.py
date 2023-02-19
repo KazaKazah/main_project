@@ -1,5 +1,5 @@
 from django.contrib import admin
-from content.models.animation import *
+from content.models.content.animations.animation import *
 # Register your models here.
 
 admin.site.register(Animations)
