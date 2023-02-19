@@ -4,3 +4,4 @@ from content.models.animation import *
 
 admin.site.register(Animations)
 admin.site.register(AnimationsType)
+admin.site.register(Animation)

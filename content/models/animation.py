@@ -34,6 +34,25 @@ class AnimationsType(models.Model):
     def __str__(self):
         return self.name
 
+    def get_absolute_url(self):
+        return reverse('anima_anima_detail', kwargs={'slug': self.url})
+
     class Meta:
         verbose_name = 'жанр'
         verbose_name_plural = 'жанры'
+
+
+class Animation(models.Model):
+    name = models.CharField(max_length=255, default='', verbose_name='название анимации')
+    body = models.TextField(default='', verbose_name='краткое описание анимации')
+    animations_type = models.ForeignKey(AnimationsType, on_delete=models.PROTECT, default='',
+                                   verbose_name='к какому жанру относиться')
+    anima_pic = models.ImageField(storage=storage, blank=True, null=True, default='', verbose_name='картинка анимации')
+    url = models.SlugField(unique=True)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = 'анимация'
+        verbose_name_plural = 'анимации'
