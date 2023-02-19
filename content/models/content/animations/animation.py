@@ -1,7 +1,7 @@
 from django.db import models
 from django_s3_storage.storage import S3Storage
 
-from content.models import *
+from content.models.content.animations.animations_type import AnimationsType
 
 storage = S3Storage(aws_s3_bucket_name='test-buckets-ny')
 
