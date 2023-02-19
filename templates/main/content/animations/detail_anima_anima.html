@@ -1,4 +1,25 @@
 {% extends 'main/content/animations/base_animations.html' %}
 {% block anima %}
-    !!
+    <h1>Страница анимации</h1>
+    <br>
+    <hr>
+    <br>
+    <div class="container text-center">
+        <div class="row row-cols-4">
+            {% for w in animas %}
+                <div class="col my-4">
+                    <div class="card" style="width: 18rem;">
+                        {% if w.anima_pic %}
+                            <img src="{{ w.anima_pic.url }}" class="card-img-top" alt="...">
+                        {% endif %}
+                        <div class="card-body">
+                            <h5 class="card-title">Название: {{ w.name }}</h5>
+                            <h6 class="card-title">Описание: {{ w.body|slice:20 }}</h6>
+                            <a href="" class="btn btn-primary">Персонажи</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
 {% endblock anima %}
