@@ -1,6 +1,6 @@
 from django.urls import path
 
-from content.views.animated_view import *
+from content.views import *
 
 urlpatterns = [
     path('content/', AnimationHomeView.as_view(), name='anima_home'),
