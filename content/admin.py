@@ -7,3 +7,4 @@ from content.models import *
 admin.site.register(Animations)
 admin.site.register(AnimationsType)
 admin.site.register(Animation)
+admin.site.register(CharesterAnima)

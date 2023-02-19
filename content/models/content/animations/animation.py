@@ -1,6 +1,6 @@
 from django.db import models
 from django_s3_storage.storage import S3Storage
-
+from django.urls import reverse
 from content.models.content.animations.animations_type import AnimationsType
 
 storage = S3Storage(aws_s3_bucket_name='test-buckets-ny')
@@ -19,6 +19,9 @@ class Animation(models.Model):
 
     def __str__(self):
         return self.name
+
+    def get_absolute_url(self):
+        return reverse('anima_charester_detail', kwargs={'slug': self.url})
 
     class Meta:
         verbose_name = 'анимация'
