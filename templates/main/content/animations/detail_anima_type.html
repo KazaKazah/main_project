@@ -14,7 +14,7 @@
                             <p class="card-text">
                                 краткое описание: {{ t.body|slice:20 }}<br>
                             </p>
-                            <a href="" class="btn btn-primary">перейти к связанным аниме</a>
+                            <a href="{{ t.get_absolute_url }}" class="btn btn-primary">перейти к связанным аниме</a>
                         </div>
                     </div>
                 </div>
