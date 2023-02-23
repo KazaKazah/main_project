@@ -1,4 +1,4 @@
-from django import forms
+from django import forms 
 
 from content.models import *
 
@@ -13,4 +13,17 @@ class AnimaTypeCreateForm(forms.ModelForm):
             'body': forms.Textarea(attrs={'class': 'form-control'}),
             'url': forms.TextInput(attrs={'class': 'form-control'}),
             'animations': forms.Select(attrs={'class': 'form-control'}),
+        }
+
+
+class AnimaAnimationsCreateForm(forms.ModelForm):
+    class Meta:
+        model = Animation
+        fields = ('name', 'body', 'url', 'animations_type', 'anima_pic')
+
+        widgets = {
+            'name': forms.TextInput(attrs={'class': 'form-control'}),
+            'body': forms.Textarea(attrs={'class': 'form-control'}),
+            'url': forms.TextInput(attrs={'class': 'form-control'}),
+            'animations_type': forms.Select(attrs={'class': 'form-control'}),
         }
