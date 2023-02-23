@@ -1,4 +1,4 @@
-from content.views.anima_create_type import AnimeCreateTypeView
+from content.views.content.animations.anima_create_type import AnimeCreateTypeView
 from content.views.content.animations.detail_view.anima_charester_detail_view import AnimaCharesterDetailView
 from content.views.content.animations.detail_view.anime_anima_detail_view import AnimeAnimaDetailView
 from content.views.content.animations.detail_view.anime_type_detail_view import AnimeTypeDetailView
