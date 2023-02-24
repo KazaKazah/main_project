@@ -24,5 +24,5 @@ class Animation(models.Model):
         return reverse('anima_charester_detail', kwargs={'slug': self.url})
 
     class Meta:
-        verbose_name = 'анимация'
-        verbose_name_plural = 'анимации'
+        verbose_name = 'контент'
+        verbose_name_plural = 'контенты'

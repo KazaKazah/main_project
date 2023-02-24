@@ -15,6 +15,9 @@ class CharesterAnima(models.Model):
 
     def __str__(self):
         return self.name
+    
+    def get_absolute_url(self):
+        return reverse('anima_home')
 
     class Meta:
         verbose_name = 'персонаж'

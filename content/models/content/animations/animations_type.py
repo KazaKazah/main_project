@@ -10,7 +10,7 @@ class AnimationsType(models.Model):
     name = models.CharField(max_length=255, default='', verbose_name='название жанра')
     body = models.TextField(default='', verbose_name='краткое описание жанра')
     animations = models.ForeignKey(Animations, on_delete=models.PROTECT, default='',
-                                   verbose_name='к какой мультипликации относиться')
+                                   verbose_name='к какой категории относиться')
     url = models.SlugField(unique=True)
 
     def __str__(self):

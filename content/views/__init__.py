@@ -1,5 +1,6 @@
 from content.views.content.animations.create_view.anima_create_type import AnimeCreateTypeView
 from content.views.content.animations.create_view.anima_create_animations import AnimeCreateAnimationsView
+from content.views.content.animations.create_view.anima_create_charester import AnimeCreateCharesterView
 #-----------------------------
 from content.views.content.animations.detail_view.anima_charester_detail_view import AnimaCharesterDetailView
 from content.views.content.animations.detail_view.anime_anima_detail_view import AnimeAnimaDetailView
@@ -16,4 +17,5 @@ __all__ = [
     # ---------------------------
     'AnimeCreateTypeView',
     'AnimeCreateAnimationsView',
+    'AnimeCreateCharesterView',
 ]

@@ -6,8 +6,8 @@ storage = S3Storage(aws_s3_bucket_name='test-buckets-ny')
 
 
 class Animations(models.Model):
-    name = models.CharField(max_length=255, default='', verbose_name='название анимации')
-    body = models.TextField(default='', verbose_name='краткое описание')
+    name = models.CharField(max_length=255, default='', verbose_name='название категории')
+    body = models.TextField(default='', verbose_name='краткое категории')
     url = models.SlugField(unique=True)
 
     def __str__(self):
@@ -17,6 +17,6 @@ class Animations(models.Model):
         return reverse('anima_detail', kwargs={'slug': self.url})
 
     class Meta:
-        verbose_name = 'вид мультипликации'
-        verbose_name_plural = 'виды мультипликации'
+        verbose_name = 'категория'
+        verbose_name_plural = 'категории'
 
