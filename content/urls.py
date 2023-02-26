@@ -11,5 +11,7 @@ urlpatterns = [
     # -----------------------------------------------------------------
     path('content/add_type', AnimeCreateTypeView.as_view(), name='anima_type_add'),
     path('content/add_animations', AnimeCreateAnimationsView.as_view(), name='anima_animations_add'),
-    path('content/add_charester', AnimeCreateCharesterView.as_view(), name = 'anima_charester_add')
+    path('content/add_charester', AnimeCreateCharesterView.as_view(), name = 'anima_charester_add'),
+    #------------------------------------------------------------------
+    path('content/edit/<int:pk>/', AnimeUpdateAnimationsView.as_view(), name='anima_animations_update'),
 ]

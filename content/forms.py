@@ -40,3 +40,15 @@ class AnimaCharesterCreateForm(forms.ModelForm):
             'url': forms.TextInput(attrs={'class': 'form-control'}),
             'animation': forms.Select(attrs={'class': 'form-control'}),
         }
+
+
+class AnimaAnimationsUpdateForm(forms.ModelForm):
+    class Meta:
+        model = Animation
+        fields = ('name', 'body', 'url', 'anima_pic')
+
+        widgets = {
+            'name': forms.TextInput(attrs={'class': 'form-control'}),
+            'body': forms.Textarea(attrs={'class': 'form-control'}),
+            'url': forms.TextInput(attrs={'class': 'form-control'}),
+        }
