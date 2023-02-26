@@ -1,6 +1,6 @@
 from django.db import models
 from django_s3_storage.storage import S3Storage
-
+from django.shortcuts import reverse
 from content.models.content.animations.animation import Animation
 
 storage = S3Storage(aws_s3_bucket_name='test-buckets-ny')

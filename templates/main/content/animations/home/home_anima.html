@@ -1,20 +1,27 @@
 {% extends 'main/content/animations/base_animations.html' %}
 {% block anima %}
-    <div class="container text-center">
-        <div class="row row-cols-3">
-            {% for a in anima %}
-                <div class="col my-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ a.name }}</h5>
-                            <p class="card-text">
-                                краткое описание: {{ a.body }}<br>
-                            </p>
-                            <a href="{{ a.get_absolute_url }}" class="btn btn-primary">перейти к связанным жанрам</a>
-                        </div>
-                    </div>
+<br>
+<h1>
+    Категория
+</h1>
+<br>
+<hr>
+<br>
+<div class="container text-center">
+    <div class="row row-cols-3">
+        {% for a in anima %}
+        <div class="col my-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{ a.name }}</h5>
+                    <p class="card-text">
+                        краткое описание: {{ a.body }}<br>
+                    </p>
+                    <a href="{{ a.get_absolute_url }}" class="btn btn-primary">перейти к связанным жанрам</a>
                 </div>
-            {% endfor %}
+            </div>
         </div>
+        {% endfor %}
     </div>
+</div>
 {% endblock anima %}
