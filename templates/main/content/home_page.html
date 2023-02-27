@@ -1,4 +1,19 @@
 {% extends 'main/content/base_cont.html' %}
 {% block cont %}
-        !
+    <div class="content test-center">
+        <div class="row row-col3-3">
+            {% for content in contenttype_list %}
+                <div class="col my-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Название:<a href="#">{{ content.name }}</a></h5>
+                            <h6 class="card-title">Краткое описание: {{ content.title }}</h6>
+                            <h6 class="card-title">Автор: {{ content.ather }}</h6>
+                            <h6 class="card-title">Дата создания: {{ content.dates }}</h6>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
 {% endblock cont %}
