@@ -37,7 +37,6 @@ INSTALLED_APPS = [
     'django_s3_storage',
     'blog.apps.BlogConfig',
     'users.apps.UsersConfig',
-    'content.apps.ContentConfig',
 ]
 
 MIDDLEWARE = [
