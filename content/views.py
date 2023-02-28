@@ -20,7 +20,7 @@ class ContentDetailView(DetailView):
     template_name = 'main/content/detail_page.html'
 
     def get_context_data(self, *args, **kwargs):
-        cont = Content.objects.filter(contenttype_id=kwargs.get('object').id)
+        cont = Content.objects.filter(content_type_id=kwargs.get('object').id)
         context = {
             'cont': cont
         }
