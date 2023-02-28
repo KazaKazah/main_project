@@ -1,0 +1,15 @@
+{% extends 'main/content/base_cont.html' %}
+{% block cont %}
+    <br>
+    <h1>
+        Список связанного контента
+    </h1>
+    <small>
+        Автор:
+        {{ content.ather.first_name }}
+        {{ content.ather.last_name }}
+    </small>
+    <br>
+    <hr>
+    <br>
+{% endblock cont %}

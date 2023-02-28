@@ -23,3 +23,5 @@ class ContentType(models.Model):
     class Meta:
         verbose_name = 'вид контента'
         verbose_name_plural = 'виды контента'
+
+
