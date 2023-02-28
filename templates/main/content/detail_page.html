@@ -10,7 +10,25 @@
     <br>
     <hr>
     <br>
-    <div class="container">
-        
+    <div class="container text-center">
+        <div class="row row-cols-3">
+            {% for c in cont %}
+                <div class="col my-3">
+                    <div class="card">
+                        {% if c.cont_pic %}
+                            <img src="{{ c.cont_pic.url }}" class="card-img-top" alt="...">
+                        {% endif %}
+                        <div class="card-body">
+                            <h5 class="card-title"></h5>
+                            <p class="card-text">
+                                название: {{ c.name }} <br>
+                                краткое описание: {{ c.tit }}
+                            </p>
+                            <a href="" class="btn btn-primary">Детальная информация</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
     </div>
 {% endblock cont %}
