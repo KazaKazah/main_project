@@ -17,4 +17,4 @@ class ContentHomeView(ListView):
 class ContentDetailView(DetailView):
     model = ContentType
     slug_field = 'url'
-    template_name = ''
+    template_name = 'main/content/detail_page.html'

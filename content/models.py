@@ -18,7 +18,7 @@ class ContentType(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return reverse('', kwargs={'slug': self.url})
+        return reverse('content_detail', kwargs={'slug': self.url})
 
     class Meta:
         verbose_name = 'вид контента'
