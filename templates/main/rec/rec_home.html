@@ -1,0 +1,18 @@
+{% extends 'rrrr/rrrr_base.html' %}
+{% block rrrr %}
+    <div class="container">
+        <div class="row row-cols-3">
+            {% for rr in rrrr_list %}
+                <div class="col my-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Название: <a href="{{ rr.get_absolute_url }}">{{ rr.name }}</a>
+                            </h5>
+                            <h6 class="card-title">Краткое описание: {{ rr.title }} </h6>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock rrrr %}
