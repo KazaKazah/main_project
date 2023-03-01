@@ -33,7 +33,7 @@ class Content(models.Model):
     name = models.CharField(max_length=255, default='', verbose_name='название контента')
     cont_pic = models.ImageField(storage=storage, blank=True, null=True, default='', verbose_name='картинка контента')
     tit = models.CharField(max_length=100, default='', verbose_name='краткое описание контента')
-    content_type = models.ForeignKey(ContentType, on_delete=models.PROTECT, default='', verbose_name='вид контента')
+    content_type = models.ForeignKey(Contentyp, on_delete=models.PROTECT, verbose_name='вид контента')
     url = models.SlugField(unique=True)
 
     def __str__(self):
