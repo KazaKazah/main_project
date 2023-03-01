@@ -9,7 +9,7 @@ storage = S3Storage(aws_s3_bucket_name='test-buckets-ny')
 # Create your models here.
 
 
-class ContentType(models.Model):
+class Contentyp(models.Model):
     """виды контента"""
     name = models.CharField(max_length=255, default='', verbose_name='название')
     title = models.CharField(max_length=255, default='', verbose_name='красткое описание')

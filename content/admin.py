@@ -3,5 +3,5 @@ from .models import *
 # Register your models here.
 
 
-admin.site.register(ContentType)
+admin.site.register(Contentyp)
 admin.site.register(Content)
