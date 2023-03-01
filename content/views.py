@@ -6,7 +6,7 @@ from .models import *
 # Create your views here.
 
 class ContentHomeView(ListView):
-    model = Contentyp
+    model = Analog
     template_name = 'main/content/home_page.html'
 
     def get_context_data(self, *args, **kwargs):
@@ -15,12 +15,12 @@ class ContentHomeView(ListView):
 
 
 class ContentDetailView(DetailView):
-    model = Contentyp
+    model = Analog
     slug_field = 'url'
     template_name = 'main/content/detail_page.html'
 
     def get_context_data(self, *args, **kwargs):
-        cont = Content.objects.filter(contentyp_id=kwargs.get('object').id)
+        cont = Content.objects.filter(analog_id=kwargs.get('object').id)
         context = {
             'cont': cont
         }
