@@ -19,7 +19,7 @@ class Rrrr(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return reverse('detail_page_rec', kwargs={'slug': self.slug})
+        return reverse('detail_pages_rec', kwargs={'slug': self.slug})
 
 
 class Ret(models.Model):
