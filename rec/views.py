@@ -25,3 +25,29 @@ class RDetailView(DetailView):
             'ret': ret
         }
         return context
+
+
+class RCDetailView(DetailView):
+    model = Ret
+    slug_field = 'slug'
+    template_name = 'main/rec/rec_detail_charester.html'
+
+    def get_context_data(self, **kwargs):
+        typ = Typ.objects.filter(ret_id=kwargs.get('object').id)
+        context = {
+            'typ': typ
+        }
+        return context
+
+
+class RCDDetailView(DetailView):
+    model = Typ
+    slug_field = 'slug'
+    template_name = 'main/rec/rec_charester_detail.html'
+
+    def get_context_data(self, **kwargs):
+        tyer = Tyer.objects.filter(typ_id=kwargs.get('object').id)
+        context = {
+            'tyer': tyer
+        }
+        return context

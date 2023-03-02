@@ -5,3 +5,5 @@ from .models import *
 
 admin.site.register(Rrrr)
 admin.site.register(Ret)
+admin.site.register(Typ)
+admin.site.register(Tyer)
