@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     'django_summernote',
     'crispy_forms',
     'django_browser_reload',
@@ -38,6 +39,8 @@ INSTALLED_APPS = [
     'blog.apps.BlogConfig',
     'users.apps.UsersConfig',
     'rec.apps.RecConfig',
+    'photologue',
+    'sortedm2m',
 ]
 
 MIDDLEWARE = [
@@ -160,3 +163,6 @@ AWS_SECRET_ACCESS_KEY = "K004Nd1he6OUMPgztGVBmuj39wvzqrk"
 
 # The full URL to the S3 endpoint. Leave blank to use the default region URL.
 AWS_S3_ENDPOINT_URL = "https://s3.us-west-004.backblazeb2.com"
+
+
+SITE_ID = 1
