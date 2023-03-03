@@ -1,4 +1,166 @@
 {% extends 'main/rec/rec_base.html' %}
 {% block rrrr %}
+    <style>
+        .wrapper {
+            position: relative;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+        }
 
+        img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: auto;
+        }
+    </style>
+
+    <div class="container text-center">
+        <div class="row">
+            <div class="col">
+                {% for t in tyer %}
+                    <div class="card" style="width: 18rem;">
+                    <div class="wrapper">
+                        {% if t.detail_pic %}
+                            <img src="{{ t.detail_pic.url }}" class="card-img-top" alt="...">
+                        {% endif %}
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">{{ t.name }}</p>
+                    </div>
+                {% endfor %}
+                </div>
+            </div>
+            {# ------------------------------------------------------------------------------ #}
+            <div class="col">
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item">
+                        {% for t in tyer %}
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                        aria-controls="flush-collapseOne">
+                                    Информация о персонаже
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                 aria-labelledby="flush-headingOne"
+                                 data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <br>
+                                    <ul>
+                                        <li>имя персонажа: {{ t.name }}</li>
+                                        <li>вселенная: {{ t.vselen }}</li>
+                                        <li>возраста: {{ t.age }}</li>
+                                        <li>родина: {{ t.plane }}</li>
+                                        <li>пол: {{ t.gender }}</li>
+                                        <li>титул: {{ t.titul }}</li>
+                                        <p>описание титула: {{ t.titul_body }}</p>
+                                    </ul>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div class="accordion-item">
+                        {% for t in tyer %}
+                            <h2 class="accordion-header" id="flush-headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                        aria-controls="flush-collapseTwo">
+                                    Расовая принадлежность
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                 aria-labelledby="flush-headingTwo"
+                                 data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li>Раса: {{ t.race }}</li>
+                                        <p>Описание расы: {{ t.race_body }}</p>
+                                    </ul>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div class="accordion-item">
+                        {% for t in tyer %}
+                            <h2 class="accordion-header" id="flush-headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                        aria-controls="flush-collapseThree">
+                                    Характеристики
+                                </button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                 aria-labelledby="flush-headingThree"
+                                 data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li>цвет волос: {{ t.h_color }}</li>
+                                        <li>цвет глаз: {{ t.e_color }}</li>
+                                        <li>рост: {{ t.rost }}</li>
+                                        <li>вес: {{ t.ves }}</li>
+                                        <li>
+                                            три характеристики:
+                                            <ul>
+                                                <li>грудь: {{ t.grud }}</li>
+                                                <li>талия: {{ t.tali }}</li>
+                                                <li>бедра: {{ t.bedr }}</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div class="accordion-item">
+                        {% for t in tyer %}
+                            <h2 class="accordion-header" id="flush-headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseFour" aria-expanded="false"
+                                        aria-controls="flush-collapseFour">
+                                    Силы и Снаряжение
+                                </button>
+                            </h2>
+                            <div id="flush-collapseFour" class="accordion-collapse collapse"
+                                 aria-labelledby="flush-headingFour"
+                                 data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li>Силы: {{ t.power }}</li>
+                                        <p>Описание Силы: {{ t.power_body }}</p>
+                                        <li>Снаряжение: {{ t.gear }}</li>
+                                        <p>Описание снаряжения: {{ t.gear_body }}</p>
+                                    </ul>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div class="accordion-item">
+                        {% for t in tyer %}
+                            <h2 class="accordion-header" id="flush-headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseFive" aria-expanded="false"
+                                        aria-controls="flush-collapseFive">
+                                    Фамильяры и Духи
+                                </button>
+                            </h2>
+                            <div id="flush-collapseFive" class="accordion-collapse collapse"
+                                 aria-labelledby="flush-headingFive"
+                                 data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li>Фамильяр: {{ t.familiar }}</li>
+                                        <p>Описание фамильяра: {{ t.familiar_body }}</p>
+                                        <li>Дух: {{ t.whisper }}</li>
+                                        <p>Описание духа: {{ t.whisper_body }}</p>
+                                    </ul>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock rrrr %}

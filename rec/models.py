@@ -1,9 +1,10 @@
-from django.db import models
 from django.contrib.auth.models import User
+from django.db import models
 from django.shortcuts import reverse
 from django_s3_storage.storage import S3Storage
 
 storage = S3Storage(aws_s3_bucket_name='test-buckets-ny')
+
 
 # Create your models here.
 
@@ -33,7 +34,7 @@ class Ret(models.Model):
 
     class Meta:
         verbose_name = 'название контента'
-        verbose_name_plural='названия контентов'
+        verbose_name_plural = 'названия контентов'
 
     def __str__(self):
         return self.name
@@ -54,19 +55,51 @@ class Typ(models.Model):
 
     def __str__(self):
         return self.name
-    
+
     def get_absolute_url(self):
         return reverse('detail_charester_page', kwargs={'slug': self.slug})
 
 
 class Tyer(models.Model):
-    name = models.CharField(max_length=255, default='', verbose_name='имя персонажа')
-    typ = models.ForeignKey(Typ, on_delete=models.PROTECT, default='')
-    slug = models.SlugField(unique=True)
+    name = models.CharField(max_length=255, default='', null=True, blank=True, verbose_name='имя')
+    vselen = models.CharField(max_length=255, default='', null=True, blank=True, verbose_name='вселенная')
+    age = models.CharField(max_length=255, default='', null=True, blank=True, verbose_name='возраст')
+    plane = models.CharField(max_length=255, default='', null=True, blank=True, verbose_name='родина')
+    race = models.CharField(max_length=255, default='', null=True, blank=True, verbose_name='раса')
+    race_body = models.TextField()
+    gender = models.CharField(max_length=255, default='', null=True, blank=True, verbose_name='пол')
+    #
+    h_color = models.CharField(max_length=255, default='', null=True, blank=True, verbose_name='цвет волос')
+    e_color = models.CharField(max_length=255, default='', null=True, blank=True, verbose_name='цвет глаз')
+    rost = models.CharField(max_length=255, default='', null=True, blank=True, verbose_name='рост')
+    ves = models.CharField(max_length=255, default='', null=True, blank=True, verbose_name='вес')
+    grud = models.CharField(max_length=255, default='', null=True, blank=True, verbose_name='грудь')
+    tali = models.CharField(max_length=255, default='', null=True, blank=True, verbose_name='талия')
+    bedr = models.CharField(max_length=255, default='', null=True, blank=True, verbose_name='бедра')
+    #
+    titul = models.CharField(max_length=255, default='', null=True, blank=True, verbose_name='титул')
+    titul_body = models.TextField(null=True, blank=True, verbose_name='описание титула')
+    power = models.CharField(max_length=255, default='', null=True, blank=True, verbose_name='сила')
+    power_body = models.TextField(default='', null=True, blank=True, verbose_name='описание силы')
+    gear = models.CharField(max_length=255, default='', null=True, blank=True, verbose_name='снаряжение')
+    gear_body = models.TextField(default='', null=True, blank=True, verbose_name='описание снаряжения')
+    #
+    detail_pic = models.ImageField(storage=storage, null=True, blank=True, verbose_name='картинка')
+    #
+    familiar = models.CharField(max_length=255, default='', null=True, blank=True, verbose_name='фамилияр')
+    familiar_body = models.TextField(default='', null=True, blank=True, verbose_name='описание фамилияра')
+    whisper = models.CharField(max_length=255, default='', null=True, blank=True, verbose_name='дух')
+    whisper_body = models.TextField(default='', null=True, blank=True, verbose_name='описание духа')
 
-    class Meta:
-        verbose_name = 'информация о персонаже'
-        verbose_name_plural = 'информации о персонажах'
 
-    def __str__(self):
-        return self.name
+typ = models.ForeignKey(Typ, on_delete=models.PROTECT, default='')
+slug = models.SlugField(unique=True)
+
+
+class Meta:
+    verbose_name = 'информация о персонаже'
+    verbose_name_plural = 'информации о персонажах'
+
+
+def __str__(self):
+    return self.name
