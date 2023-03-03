@@ -66,7 +66,7 @@ class Tyer(models.Model):
     age = models.CharField(max_length=255, default='', null=True, blank=True, verbose_name='возраст')
     plane = models.CharField(max_length=255, default='', null=True, blank=True, verbose_name='родина')
     race = models.CharField(max_length=255, default='', null=True, blank=True, verbose_name='раса')
-    race_body = models.TextField()
+    race_body = models.TextField(default='')
     gender = models.CharField(max_length=255, default='', null=True, blank=True, verbose_name='пол')
     #
     h_color = models.CharField(max_length=255, default='', null=True, blank=True, verbose_name='цвет волос')
@@ -90,16 +90,14 @@ class Tyer(models.Model):
     familiar_body = models.TextField(default='', null=True, blank=True, verbose_name='описание фамилияра')
     whisper = models.CharField(max_length=255, default='', null=True, blank=True, verbose_name='дух')
     whisper_body = models.TextField(default='', null=True, blank=True, verbose_name='описание духа')
+    typ = models.ForeignKey(Typ, on_delete=models.PROTECT, default='')
+    slug = models.SlugField(unique=True, default='')
 
 
-typ = models.ForeignKey(Typ, on_delete=models.PROTECT, default='')
-slug = models.SlugField(unique=True)
+    class Meta:
+        verbose_name = 'информация о персонаже'
+        verbose_name_plural = 'информации о персонажах'
 
 
-class Meta:
-    verbose_name = 'информация о персонаже'
-    verbose_name_plural = 'информации о персонажах'
-
-
-def __str__(self):
-    return self.name
+    def __str__(self):
+        return self.name
