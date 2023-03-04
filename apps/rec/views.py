@@ -1,6 +1,6 @@
-from django.shortcuts import render
-from .models import *
 from django.views.generic import *
+
+from apps.rec.models import *
 
 
 # Create your views here.
