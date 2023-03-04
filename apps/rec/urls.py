@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import *
+from apps.rec.views import *
 
 urlpatterns = [
     path('content/', RHomeView.as_view(), name='rec_home_pages'),
