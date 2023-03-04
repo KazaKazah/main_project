@@ -9,8 +9,8 @@ urlpatterns = [
     path('summernote/', include("django_summernote.urls")),
     path('photologue/', include('photologue.urls', namespace='photologue')),
     path('', include('apps.blog.urls')),
-    path('', include('users.urls')),
-    path('', include('rec.urls')),
+    path('', include('apps.users.urls')),
+    path('', include('apps.rec.urls')),
 ]
 
 

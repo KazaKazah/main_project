@@ -1,9 +1,9 @@
 from django.contrib.auth import views as auth_views
 from django.urls import path
 
-from users.forms import LoginForm
-from users.views import CustomLoginView
-from users.views import ResetPasswordView
+from apps.users.forms import LoginForm
+from apps.users.views import CustomLoginView
+from apps.users.views import ResetPasswordView
 from .views import home, RegisterView  # Import the view here
 from .views import profile
 

@@ -37,8 +37,8 @@ INSTALLED_APPS = [
     'django_browser_reload',
     'django_s3_storage',
     'apps.blog.apps.BlogConfig',
-    'users.apps.UsersConfig',
-    'rec.apps.RecConfig',
+    'apps.users.apps.UsersConfig',
+    'apps.rec.apps.RecConfig',
     'photologue',
     'sortedm2m',
 ]
