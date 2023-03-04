@@ -36,7 +36,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'django_browser_reload',
     'django_s3_storage',
-    'blog.apps.BlogConfig',
+    'apps.blog.apps.BlogConfig',
     'users.apps.UsersConfig',
     'rec.apps.RecConfig',
     'photologue',
