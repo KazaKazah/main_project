@@ -1,28 +1,35 @@
 {% extends 'main/rec/rec_base.html' %}
 {% block rrrr %}
-<br>
-<h1>Список персонажей</h1>
-<br>
-<hr>
-<br>
-<div class="container text-center">
-    <div class="row row-cols-3">
-        {% for typ in typ %}
-            <div class="col my-3">
-                <div class="card">
-                    {% if typ.typ_pic %}
-                        <img src="{{ typ.typ_pic.url }}" class="card-img-top" alt="...">
-                    {% endif %}
-                    <div class="card-body">
-                        <h5 class="card-title"></h5>
-                        <p class="card-text">
-                            название: {{ typ.name }}<br>
-                        </p>
-                        <a href="{{ typ.get_absolute_url }}" class="btn btn-primary">Детальная информация</a>
+    <style>
+        img {
+            height: 400px;
+            width: 300px;
+        }
+    </style>
+
+    <br>
+    <h1>Список персонажей</h1>
+    <br>
+    <hr>
+    <br>
+    <div class="container text-center">
+        <div class="row row-cols-3">
+            {% for typ in typ %}
+                <div class="col my-3">
+                    <div class="card">
+                        {% if typ.typ_pic %}
+                            <img src="{{ typ.typ_pic.url }}" class="card-img-top" alt="...">
+                        {% endif %}
+                        <div class="card-body">
+                            <h5 class="card-title"></h5>
+                            <p class="card-text">
+                                название: {{ typ.name }}<br>
+                            </p>
+                            <a href="{{ typ.get_absolute_url }}" class="btn btn-primary">Детальная информация</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        {% endfor %}
+            {% endfor %}
+        </div>
     </div>
-</div>
 {% endblock rrrr %}
