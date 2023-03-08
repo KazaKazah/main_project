@@ -7,6 +7,8 @@ from apps.rec.views.detail_view.r_detail_view import RDetailView
 from apps.rec.views.create_view.r_create_view import RCreateView
 from apps.rec.views.create_view.r_c_create_view import RCCreateView
 from apps.rec.views.create_view.r_c_d_create_view import RCDCreateView
+# -----------------------------------------------------------------------
+from apps.rec.views.update_view.r_update import RUpdateView
 
 __all__ = [
     'RHomeView',
@@ -18,4 +20,6 @@ __all__ = [
     'RCreateView',
     'RCCreateView',
     'RCDCreateView',
+    # ------------------------
+    'RUpdateView',
 ]

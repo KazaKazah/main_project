@@ -12,4 +12,6 @@ urlpatterns = [
     path('add/content_type', RCreateView.as_view(), name='create_content_type'),
     path('add/content_name', RCCreateView.as_view(), name='create_content_name'),
     path('add/content_charester', RCDCreateView.as_view(), name = 'create_content_charester'),
+    # --------------------------------------------------------------------------------------------------------------
+    path('update/content_type', RUpdateView.as_view(), name = 'update_content_type'),
 ]
