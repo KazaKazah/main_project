@@ -11,6 +11,7 @@ urlpatterns = [
     path('', include('apps.blog.urls')),
     path('', include('apps.users.urls')),
     path('', include('apps.rec.urls')),
+    path('', include('apps.gallery.urls')),
 ]
 
 
