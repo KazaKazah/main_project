@@ -6,7 +6,7 @@ from django.db import models
 
 class Album(models.Model):
     name = models.CharField(max_length=255, default='', verbose_name='название альбома')
-    dar = models.DateTimeField(auto_now_add=True)
+    times = models.DateTimeField(auto_now_add=True)
     ttt = models.ForeignKey(User, on_delete=models.PROTECT, default='')
 
     class Meta:
