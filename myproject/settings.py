@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'apps.blog.apps.BlogConfig',
     'apps.users.apps.UsersConfig',
     'apps.rec.apps.RecConfig',
-    'apps.gallery.apps.GalleryConfig',
     'photologue',
     'sortedm2m',
 ]
