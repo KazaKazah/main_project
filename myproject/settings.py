@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'django_s3_storage',
     'apps.blog.apps.BlogConfig',
     'apps.users.apps.UsersConfig',
-    'apps.rec.apps.RecConfig',
     'photologue',
     'sortedm2m',
 ]

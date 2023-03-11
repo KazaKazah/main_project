@@ -10,7 +10,6 @@ urlpatterns = [
     path('photologue/', include('photologue.urls', namespace='photologue')),
     path('', include('apps.blog.urls')),
     path('', include('apps.users.urls')),
-    path('', include('apps.rec.urls')),
 ]
 
 
